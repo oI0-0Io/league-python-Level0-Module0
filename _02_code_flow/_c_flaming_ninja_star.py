@@ -21,16 +21,27 @@ if __name__ == '__main__':
     flameSize = 130         # the length of the flaming arms
     
     # Make a new turtle
-    
+    bob = turtle.Turtle()
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    bob.shape('turtle')
     # Set the turtle width to 2
-    
+    bob.width(2)
     # Set the turtle speed to 0 (fastest)
-    
+    bob.speed(0)
     # Use a for loop to repeat all of the code below ONE time (we will change
     # this later)
-        
+    for i in range(25):
+        bob.fillcolor('orange')
+        bob.begin_fill()
+        bob.right(360/8)
+        bob.forward(64)
+        bob.right(-40)
+        bob.forward(flameSize)
+        bob.right(170)
+        bob.forward(flameSize)
+        bob.right(62)
+        bob.forward(baseSize)
+        bob.end_fill()
         # Set the turtle .fillcolor() to orange
         
         # Call the turtle .begin_fill() function
@@ -56,7 +67,7 @@ if __name__ == '__main__':
         # Call the turtle .end_fill() method
         
     # Hide your turtle so you can see the pattern.
-        
+    bob.hideturtle()
     # TEST   Run the program. Check that your shape is the same as the first
     #        picture in the recipe. This is one arm of the ninja star.
 
